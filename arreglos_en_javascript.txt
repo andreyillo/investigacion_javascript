@@ -1,0 +1,59 @@
+arreglos en javascript:
+
+Al igual que en la mayor parte de los lenguajes de programación, en JavaScript podemos trabajar con arrays (también llamados arreglos, vectores o matrices). Los arrays son de gran importancia ya que permiten
+organizar series de datos que comparten el mismo nombre pero se diferencian por un índice.
+
+DECLARACIÓN E INICIALIZACIÓN DE ARRAYS:
+La declaración de un array se hace de misma forma que se declara cualquier variable: var nombreDelArray;
+
+El array adquiere condición de tal cuando la variable se inicializa con forma de array, bien como array con un contenido inicial o bien como array vacío:
+EJEMPLO:
+var pais;
+
+pais = ['Mexico', 'España', 'Argentina', 'Chile', 'Colombia', 'Venezuela', 'Perú', 'Costa Rica'];
+
+O podemos hacerlo todo en una sola línea:
+
+var pais = ['Mexico', 'España', 'Argentina', 'Chile', 'Colombia', 'Venezuela', 'Perú', 'Costa Rica'];
+
+En este ejemplo decimos que hemos declarado un array de 8 elementos. Cada elemento tiene un índice, comenzando los índices por el número 0. Por tanto los 8 elementos
+ del array anterior son: pais[0], pais[1], pais[2], pais[3], pais[4], pais[5], pais[6] y pais[7].
+
+ARRAYS CON ELEMENTOS SIN DEFINIR:
+
+Podemos dar valor a un elemento de un array sin que los anteriores elementos estén definidos como hemos hecho en el ejemplo, declarando el elemento de índice 3 sin 
+haber definido los índices 0, 1 y 2. Los elementos no definidos toman valor “undefined”. En este ejemplo fruta[0] no ha sido definido por lo que si intentamos 
+invocarlo su valor es undefined.
+
+Para que JavaScript comprenda que una variable es un array hay que indicárselo explícitamente. Es válido: var pais = []; pais[0] = 'Mexico';
+
+Sin embargo no es válido: var pais; pais[0] = 'Mexico'; ¿Por qué? Porque en este código no hemos declarado explícitamente que pais sea un array. Si no lo hemos
+ declarado, no podemos empezar a usar índices asociados a la variable como si se tratara de un array. Si lo hacemos se entiende como un error en el código, lo que 
+dará lugar a que JavaScript no se ejecute.
+
+Un array puede inicializarse dejando ciertos índices sin un contenido definido. Para ello, se deja un espacio separado por comas como en este ejemplo:
+
+var ciudad = ["Buenos Aires", , "Madrid"];
+
+Esta declaración supone que el array tiene 3 elementos. Ciudad[0] que tiene valor Buenos Aires, ciudad[1] que tiene valor undefined, y ciudad [2] que tiene valor
+ Madrid.
+
+ACCESO A ÍNDICES NO EXISTENTES:
+
+En otros lenguajes de programación, intentar acceder a un índice de array inexistente devuelve un error, pero en JavaScript no es así. Si escribimos pais[40] cuando 
+sólo hemos definido hasta el índice 7, el resultado es que pais[40] devuelve undefined. A diferencia de en otros lenguajes, los arrays en JavaScript no tienen un
+ número fijo de elementos, sino que el número de elementos del array se ajusta dinámicamente según las necesidad
+
+TIPADO DE LOS ARRAYS:
+
+En otros lenguajes de programación un array contiene un tipo de datos y se dice que el array es de ese tipo. Por ejemplo un array puede ser un array de enteros, o un
+ array de cadenas de texto. Pero no pueden existir arrays que contengan indistintamente elementos de distinto tipo. Esto sí es posible en JavaScript, y por ello se 
+dice que los arrays en JavaScript no tienen tipo. Por ejemplo se admite algo como esto: var datos = ['Frío', 33, false, 'nube', -11.22, true, 3.33, 'variado'];
+
+En este array el elemento de índice cero es de tipo texto, el de índice 1 es un valor numérico, el elemento de índice tres es un valor booleano, etc.
+
+PROPIEDAD LENGTH DE LOS ARRAYS:
+
+La propiedad length de un array indica el número máximo de elementos en el array de acuerdo con el índice máximo existente (independientemente de que los elementos del
+ array tengan contenido o no). Por ejemplo si definimos var oficina = []; oficina[25] = 'Oficial José Vargas Corononado’; la propiedad oficina.length devuelve 26, 
+número de elementos para el array (de 1 a 25 más el correspondiente al 0).
